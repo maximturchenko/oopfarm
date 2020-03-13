@@ -1,7 +1,22 @@
 <?php
 
+namespace maximturchenko\oopfarm;
+
 class Cow{
 
-    //Корова может давать 8-12 литров молока за один надой;
-    //У каждой коровы и курицы есть уникальный регистрационный номер.
+    private $regid;
+    private static $counter=0;
+    private $milk;
+    
+    public function __construct()
+    {
+        self::$counter++;
+        $this->regid=self::$counter;
+    }
+
+    public function give()
+    {
+        $this->milk = rand(8,12);
+        return $this->milk; 
+    } 
 }

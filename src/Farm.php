@@ -1,5 +1,7 @@
 <?php
 
+namespace maximturchenko\oopfarm;
+
 class Farm{
     public function addCow(){
         return new Cow();
