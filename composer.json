@@ -1,0 +1,13 @@
+{
+    "name": "maximturchenko/oopfarm",
+    "authors": [
+        {
+            "name": "Maxim Turchenko",
+            "email": "maksarik1@yandex.ru"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"oopfarm\\": "src/"}
+    }
+}

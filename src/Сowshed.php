@@ -1,6 +1,6 @@
 <?php
 
-namespace maximturchenko\oopfarm;
+namespace oopfarm;
 
 class Сowshed{
     private $farm;
@@ -13,35 +13,35 @@ class Сowshed{
     public function __construct(Farm $farm)
     {
         $this->farm = $farm;
-        for($i=0;$i<$countcow;$i++){
-            $animals[]=$this->farm->addCow();
+        for($i=0;$i<$this->countcow;$i++){
+            $this->animals[]=$this->farm->addCow();
         }
-        for($i=0;$i<$countchicken;$i++){
-            $animals[]=$this->farm->Chicken(); 
+        for($i=0;$i<$this->countchicken;$i++){
+            $this->animals[]=$this->farm->addChiken(); 
         }
     }
 
     public function addCow()
     {
-        $animals[]=$this->farm->addCow();
+        $this->animals[]=$this->farm->addCow();
     }
     public function addChiken()
     {
-        $animals[]=$this->farm->addChiken();
+        $this->animals[]=$this->farm->addChiken();
     }
 
     public function collect()
     { 
-        foreach($animals as $animal){
+        foreach($this->animals as $animal){
             if($animal instanceof Cow){
-                $countmilk+=$animal->give();
+                $this->countmilk+=$animal->give();
             }
             if($animal instanceof Chicken){
-                $counteggs+=$animal->give();
-            }
-            echo "Собрано яиц: ".$counteggs.'\n';
-            echo "Собрано литров молока: ".$countmilk.'\n';
-        }
+                $this->counteggs+=$animal->give();
+            }            
+        }           
+        echo "Собрано яиц: ".$this->counteggs;
+        echo "\n";
+        echo "Собрано молока: ".$this->countmilk. " (литров)";     
     }
-    
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace maximturchenko\oopfarm;
+namespace oopfarm;
 
 class Farm{
     public function addCow(){
