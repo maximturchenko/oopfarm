@@ -15,10 +15,15 @@ For start you need create Farm and initialized Сowshed
 >
 ><?php
 >
->$farm = new \oopfarm\Farm();
->$cowshed = new \oopfarm\Сowshed($farm);
+>$cow='Cow';  
+>$farmcow = new \oopfarm\FarmCow(); 
+>$cowshed = new \oopfarm\Сowshed();
+>$system = new \oopfarm\System($cowshed);
 >
->$cowshed->collect();
+>$system->addAnimal($farmcow);
+>
+>$milk = $system->collect($cow);
+>echo $milk;
 >
 >```
   

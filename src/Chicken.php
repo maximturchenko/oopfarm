@@ -2,16 +2,16 @@
 
 namespace oopfarm;
 
-class Chicken{
-
-    private $regid;
-    private static $counter=0;
+class Chicken extends Animal{ 
+     
+    public $name = 'Chicken';
     private $egg;
+    private static $counter=0; 
     
     public function __construct()
     {
         self::$counter++;
-        $this->regid=self::$counter;
+        $this->regid=self::$counter; 
     }
 
     public function give()
