@@ -3,6 +3,11 @@
  
 
 ## Instruction
+
+Run php main.php in your console
+
+or
+
 For start you need create Farm and initialized Сowshed
 
 >Example
